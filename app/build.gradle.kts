@@ -37,6 +37,10 @@ android {
     buildFeatures {
         compose = true
     }
+    androidResources {
+        noCompress += "tflite"
+    }
+
 }
 
 dependencies {
@@ -56,17 +60,23 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation ("com.google.mlkit:object-detection:16.2.1")  // ML Kit for Object Detection
-    implementation ("androidx.camera:camera-core:1.3.0")        // CameraX Core
-    implementation ("androidx.camera:camera-camera2:1.3.0")    // CameraX Camera2
-    implementation ("androidx.camera:camera-lifecycle:1.3.0")   // Lifecycle for CameraX
-    implementation ("androidx.camera:camera-view:1.3.0")     // CameraX Preview View
-    implementation ("com.google.android.material:material:1.8.0") // Material UI
-    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.0") // Lifecycle support
-    implementation ("androidx.activity:activity-ktx:1.6.1") // Activity KTX
-    implementation ("com.google.mlkit:object-detection-custom:16.3.0")// Custom model (optional)
-    implementation ("com.google.android.gms:play-services-vision:20.1.3") // Google Vision (fallback)
-    implementation ("com.google.android.material:material:1.9.0") // ✅ Material Components
-
+    implementation("com.google.mlkit:object-detection:16.2.1")  // ML Kit for Object Detection
+    implementation("androidx.camera:camera-core:1.3.0")        // CameraX Core
+    implementation("androidx.camera:camera-camera2:1.3.0")    // CameraX Camera2
+    implementation("androidx.camera:camera-lifecycle:1.3.0")   // Lifecycle for CameraX
+    implementation("androidx.camera:camera-view:1.3.0")     // CameraX Preview View
+    implementation("com.google.android.material:material:1.8.0") // Material UI
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.0") // Lifecycle support
+    implementation("androidx.activity:activity-ktx:1.6.1") // Activity KTX
+    implementation("com.google.mlkit:object-detection-custom:16.3.0")// Custom model (optional)
+    implementation("com.google.android.gms:play-services-vision:20.1.3") // Google Vision (fallback)
+    implementation("com.google.android.material:material:1.9.0") // ✅ Material Components
+    implementation("org.tensorflow:tensorflow-lite:2.10.0")
+    implementation("org.tensorflow:tensorflow-lite-support:0.4.3")
+    implementation("org.tensorflow:tensorflow-lite-task-vision:0.4.3")
+    implementation ("androidx.camera:camera-core:1.3.0")
+    implementation ("androidx.camera:camera-camera2:1.3.0")
+    implementation ("androidx.camera:camera-lifecycle:1.3.0")
+    implementation ("androidx.camera:camera-view:1.3.0")
 
 }

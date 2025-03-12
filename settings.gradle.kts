@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "drishti"
 include(":app")
- 
+include(":sdk")
+
