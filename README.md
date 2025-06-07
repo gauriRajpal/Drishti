@@ -1,6 +1,4 @@
-Here's a sample README file content for your visually impaired object detection app:
 
----
 
 # Object Detection for the Visually Impaired
 
